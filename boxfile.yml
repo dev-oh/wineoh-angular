@@ -1,5 +1,5 @@
 run.config:
   engine: nodejs
-extra_steps:
-    - npm install
+  extra_steps:
+     - npm install
 
