@@ -2,7 +2,7 @@ run.config:
   engine: nodejs
 
   # add nginx package
-  extra_packages:
+  #extra_packages:
   #  - nginx
 
 # add a postgres database
