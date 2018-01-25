@@ -2,8 +2,8 @@ run.config:
   engine: nodejs
 
   # add nginx package
-  #extra_packages:
-  #  - nginx
+  extra_packages:
+    - nginx
 
 # add a postgres database
 data.db:
@@ -12,7 +12,7 @@ data.db:
 # add a web component and give it a "start" command
 web.main:
   start:
-  #  nginx: nginx -c /app/config/nginx.conf
+   nginx: nginx -c /app/config/nginx.conf
     node: npm start
 
 # add a worker component and give it a "start" command
