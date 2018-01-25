@@ -30,10 +30,7 @@ run.config:
       - zlib
 
 #
-deploy.config:
-  before_live:
-    web.main:
-      - php bin/console doctrine:schema:update --force
+ 
 
 # add a MySQL database
 data.db:
