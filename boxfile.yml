@@ -31,9 +31,12 @@ data.db:
   image: nanobox/mysql
 
 #
+
+  
 web.main:
-  php: start-php
-  apache: start-apache
+  start:
+    php: start-php
+    apache: start-apache
   # add writable dirs to your web component
   writable_dirs:
     - var
