@@ -9,13 +9,7 @@ run.config:
     runtime: php-7.0
 
     # use nginx
-    webserver: nginx
-
-    # public directory
-    document_root: web
-
-    # index
-    nginx_default_gateway: index.php
+    webserver: apache
 
     # enables php extensions
     extensions:
@@ -38,8 +32,8 @@ data.db:
 
 #
 web.main:
-  start: php-server
-
+  php: start-php
+  apache: start-apache
   # add writable dirs to your web component
   writable_dirs:
     - var
