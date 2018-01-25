@@ -1,20 +1,52 @@
 run.config:
-  engine: nodejs
+  # install php and associated runtimes
+  engine: php
 
-  # add nginx package
-  extra_packages:
-    - nginx
+  # php engine configuration (php version, extensions, etc)
+  engine.config:
 
-# add a postgres database
+    # sets the php version to 7.0
+    runtime: php-7.0
+
+    # use nginx
+    webserver: nginx
+
+    # public directory
+    document_root: web
+
+    # index
+    nginx_default_gateway: index.php
+
+    # enables php extensions
+    extensions:
+      - ctype
+      - dom
+      - iconv
+      - mbstring
+      - session
+      - simplexml
+      - tokenizer
+      - xml
+      - zlib
+
+#
+deploy.config:
+  before_live:
+    web.main:
+      - php bin/console doctrine:schema:update --force
+
+# add a MySQL database
 data.db:
-  image: nanobox/postgresql
+  image: nanobox/mysql
 
-# add a web component and give it a "start" command
+#
 web.main:
-  start:
-   nginx: nginx -c /app/config/nginx.conf
-    node: npm start
+  start: php-server
 
-# add a worker component and give it a "start" command
-# worker.main:
-#   start: node worker.js
+  # add writable dirs to your web component
+  writable_dirs:
+    - var
+
+  # the path to a logfile you want streamed to the nanobox dashboard
+  log_watch:
+    symfony[error]: /app/storage/logs/symfony.log
