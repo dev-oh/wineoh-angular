@@ -146,7 +146,7 @@ window.onload = function() {
         // Render okta sign in block
         renderOkta(oktaSignIn);
 
-      }, 6500);
+      }, 2000);
 
     } else {
 
