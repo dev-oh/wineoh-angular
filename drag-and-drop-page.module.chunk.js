@@ -118,8 +118,8 @@ var DragAndDropPageModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_4_ng2_dragula__["DragulaModule"],
                 __WEBPACK_IMPORTED_MODULE_5__angular_material__["f" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["t" /* MatListModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["p" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["u" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["q" /* MatIconModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_flex_layout__["a" /* FlexLayoutModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* RouterModule */].forChild([
                     { path: '', component: __WEBPACK_IMPORTED_MODULE_3__drag_and_drop_page_component__["a" /* DragAndDropPageComponent */] }

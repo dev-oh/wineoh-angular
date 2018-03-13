@@ -105,8 +105,8 @@ var DatepickerPageModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_material__["j" /* MatDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_material__["v" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_material__["s" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_material__["w" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_material__["t" /* MatInputModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* RouterModule */].forChild([
                     { path: '', component: __WEBPACK_IMPORTED_MODULE_5__datepicker_page_component__["a" /* DatepickerPageComponent */] }
                 ])

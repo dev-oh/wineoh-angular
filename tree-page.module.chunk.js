@@ -295,7 +295,7 @@ var TreePageModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_5_angular_tree_component__["TreeModule"],
-                __WEBPACK_IMPORTED_MODULE_6__angular_material__["s" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_6__angular_material__["t" /* MatInputModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_material__["f" /* MatCardModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_material__["m" /* MatDialogModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_material__["d" /* MatButtonModule */],
