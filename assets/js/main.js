@@ -1,18 +1,20 @@
-window.onload = function() {
 
+function animate() {
   var css3animation = false,
     css3animationstring = 'animation',
     css3keyframeprefix = '',
     css3domPrefixes = 'Webkit Moz O ms Khtml'.split(' '),
-    css3pfx  = '',
+    css3pfx = '',
     css3elem = document.createElement('div');
 
-  if( css3elem.style.animationName !== undefined ) { css3animation = true; }
+  if (css3elem.style.animationName !== undefined) {
+    css3animation = true;
+  }
 
-  if( css3animation === false ) {
-    for( var i = 0; i < css3domPrefixes.length; i++ ) {
-      if( css3elem.style[ css3domPrefixes[i] + 'AnimationName' ] !== undefined ) {
-        css3pfx = css3domPrefixes[ i ];
+  if (css3animation === false) {
+    for (var i = 0; i < css3domPrefixes.length; i++) {
+      if (css3elem.style[css3domPrefixes[i] + 'AnimationName'] !== undefined) {
+        css3pfx = css3domPrefixes[i];
         css3animationstring = css3pfx + 'Animation';
         css3keyframeprefix = '-' + css3pfx.toLowerCase() + '-';
         css3animation = true;
@@ -22,7 +24,7 @@ window.onload = function() {
   }
 
   // If browser isn't support css3 animation
-  if(css3animation === false){
+  if (css3animation === false) {
 
     // Redirect to partner page
     location.href = location.protocol + '//' + location.hostname + 'partner-portal/';
@@ -63,7 +65,7 @@ window.onload = function() {
     //     });
 
     // Okta sign in render function wrapper
-    function renderOkta(el){
+    function renderOkta(el) {
       el.session.get(function (res) {
 
         // Session exists, show logged in state.
@@ -75,7 +77,7 @@ window.onload = function() {
 
         // No session, show the login form
         el.renderEl(
-          { el: '#okta-login-container' },
+          {el: '#okta-login-container'},
           function error(err) {
             // handle errors as needed
             console.error(err);
@@ -104,19 +106,19 @@ window.onload = function() {
 
 
     // Check if browser support "animate" (WAAPI)
-    if (!document.body.animate){
+    if (!document.body.animate) {
 
       // Start play music
-      setTimeout(function(){
+      setTimeout(function () {
         audioFirst.play();
       }, 1000);
 
-      audioFirst.addEventListener('ended', function(){
+      audioFirst.addEventListener('ended', function () {
 
         audioSecond.play();
 
-        audioSecond.onplaying = function() {
-          setTimeout(function(){
+        audioSecond.onplaying = function () {
+          setTimeout(function () {
             audioThird.play();
           }, 1500)
         };
@@ -141,7 +143,7 @@ window.onload = function() {
       // Start login wrapper animation
       loginWrap.className += " animated";
 
-      setTimeout(function(){
+      setTimeout(function () {
 
         // Render okta sign in block
         renderOkta(oktaSignIn);
@@ -230,16 +232,16 @@ window.onload = function() {
         };
 
       // Start play music
-      setTimeout(function(){
+      setTimeout(function () {
         audioFirst.play();
       }, 1000);
 
-      audioFirst.addEventListener('ended', function(){
+      audioFirst.addEventListener('ended', function () {
 
         audioSecond.play();
 
-        audioSecond.onplaying = function() {
-          setTimeout(function(){
+        audioSecond.onplaying = function () {
+          setTimeout(function () {
             audioThird.play();
           }, 1500)
         };
@@ -260,7 +262,7 @@ window.onload = function() {
       mountains.querySelector('.night').animate(opacityOut, optionsOut);
       mountains.querySelector('.morning').animate(opacityIn, options);
 
-      sunLastAnim.onfinish = function() {
+      sunLastAnim.onfinish = function () {
 
         // Render okta sign in block
         // renderOkta(oktaSignIn);
@@ -268,7 +270,7 @@ window.onload = function() {
         // Start blur animation
         var blurAnimation = blur.querySelector('img').animate(opacityIn, optionsBlur);
 
-        blurAnimation.onfinish = function() {
+        blurAnimation.onfinish = function () {
 
           // Start login wrapper animation
           loginWrap.animate(keyframesLogin, optionsLogin)
@@ -280,4 +282,7 @@ window.onload = function() {
 
   }
 
-};
+}
+window.onload = function() {
+  animate();
+}
